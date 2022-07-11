@@ -1,3 +1,16 @@
+<meta name="diary-start" data-title="Scratch APIでつまづいた" data-date="2022-07-11">
+  <p><ruby><rb>こんにちは</rb><rp>(</rp><rt>こんばんは</rt><rp>)</rp></ruby>。1STEP621です。</p>
+  <p>今日、Scratchのプロフィールに自動更新の生存確認機能をつけました。</p>
+  <img src="1step621.github.io/assets/20220711_latest_login.png" alt="生存確認" width="100%">
+  <p>Scratch APIを使ったのですが、その時つまづいたところについて書きます。なお、私はJavaScriptが苦手なので、玄人の人からしたら「当たり前では？」となるかもしれませんがご了承ください。</p>
+  <h2>本題</h2>
+  <p>https://scratch.mit.edu/site-api/users/all/USERNAME/はプロフィールを書き換えるAPIですが、Scratchには「私について」と「私が取り組んでいること」の二つのプロフィールが存在します。そのため、このAPIを呼び出すにはどちらを書き換えるか指定する必要があるわけです。</p>
+  <p>ここのところでしばらく悩んでいて、まったくわからなかったのでDiscordのScratchサーバーで質問したところ、ありがたいことにすぐに返答が返ってきました。</p>
+  <p>結論としては、「body: JSON.stringify({status:書き換えたい内容})」とするのだそうです。statusと入れればよかったんですね。JSON.stringify()を入れることも初耳でした。ちなみに、「私について」の方を書き換えるには「status」を「bio」にしたらいいみたいです。</p>
+  <h2>おわり</h2>
+  <p>質問は大事。1STEP621からは以上です。</p>
+<meta name="diary-end">
+
 <meta name="diary-start" data-title="Icon Designerをつくったよ" data-date="2022-04-27">
 <p>お久しぶりです、1STEP621です。</p>
 <p>この間、<a href="https://turbowarp.org/650495185?hqpen">Icon Designer</a>というプロジェクトを出したので、頑張った点<span class="small">など</span>を書いていきます。</p>
